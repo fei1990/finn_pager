@@ -27,6 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSArray *)tabTitlesInTabView:(UIScrollView *)tabScrollView {
+    return @[@"头条333",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"天乐商城",@"头条",@"头条头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"热点"];
+}
+
 - (NSArray *)contentVcsInContainerVc:(UIPageViewController *)pagerVc {
     ContentViewController *vc1 = [[ContentViewController alloc]init];
     ViewController *vc2 = [[ViewController alloc]init];
@@ -45,7 +49,8 @@
     ContentViewController *vc15 = [[ContentViewController alloc]init];
     ContentViewController *vc16 = [[ContentViewController alloc]init];
     ContentViewController *vc17 = [[ContentViewController alloc]init];
-    return @[vc1,vc2,vc3,vc4,vc5,vc6,vc7,vc8,vc9,vc10,vc11,vc12,vc13,vc14,vc15,vc16,vc17];
+    ViewController *vc18 = [[ViewController alloc]init];
+    return @[vc1,vc2,vc3,vc4,vc5,vc6,vc7,vc8,vc9,vc10,vc11,vc12,vc13,vc14,vc15,vc16,vc17,vc18];
 }
 
 - (CGFloat)itemTitleFontSize:(UIViewController *)vc {

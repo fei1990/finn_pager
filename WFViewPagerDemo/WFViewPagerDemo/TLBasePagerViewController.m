@@ -409,11 +409,13 @@ const CGFloat textHeight = 20;
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
     
-    [self changePreLblStatesWithIndex:self.currentIndex];
     
-    [self scrollToNextContentVcWithIndex:self.pendingIndex];
     
     if (completed) {
+        
+        [self changePreLblStatesWithIndex:self.currentIndex];
+        
+        [self scrollToNextContentVcWithIndex:self.pendingIndex];
         
         UIViewController *contentVc = [self contentVcWithIndex:self.pendingIndex];
         
@@ -440,7 +442,7 @@ const CGFloat textHeight = 20;
 
 #pragma mark - TLPageViewDataSource
 - (NSArray *)tabTitlesInTabView:(UIScrollView *)tabScrollView {
-    return @[@"头条333",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"天乐商城",@"头条",@"头条头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条"];
+    return @[@"头条333",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"天乐商城",@"头条",@"头条头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"头条",@"热点"];
 }
 
 - (NSInteger)defaultSelectContentVc:(UIPageViewController *)pageVc {
